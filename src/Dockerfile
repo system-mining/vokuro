@@ -9,7 +9,8 @@ RUN apt-get update && apt-get install -y curl
 RUN curl -s https://packagecloud.io/install/repositories/phalcon/stable/script.deb.sh | bash
 
 # Install phalcon & other dependency library
-RUN apt-get install -y php7.0-phalcon php7.0-mysql 
+RUN apt-get install -y php7.0-phalcon && docker-php-ext-install mysqli
+
 
 
 
