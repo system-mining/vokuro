@@ -1,0 +1,25 @@
+version: '2'
+services:
+  vokuro:
+    build:
+     context: ./src
+    volumes:
+      - ./src:/var/www/html
+    ports:
+      - 8888:80
+    links:
+      - mysql:mysql
+    depends_on:
+      - mysql
+  mysql:
+    image: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=mysql_12345
+      - MYSQL_DATABASE=vokuro
+    volumes:
+      - ./stack/mysql/data:/var/lib/mysql:rw
+      - ./stack/mysql/entrypoint:/docker-entrypoint-initdb.d
+
+
+
+    
