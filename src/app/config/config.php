@@ -3,13 +3,14 @@
 use Phalcon\Config;
 use Phalcon\Logger;
 
+
 return new Config([
     'database' => [
         'adapter' => 'Mysql',
-        'host' => '127.0.0.1',
+        'host' => 'mysql',
         'username' => 'root',
-        'password' => '',
-        'dbname' => 'vokuro'
+        'password' => 'mysql_12345',
+        'dbname'   => 'vokuro'
     ],
     'application' => [
         'controllersDir' => APP_PATH . '/controllers/',
