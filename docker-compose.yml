@@ -9,7 +9,6 @@ services:
      - 8888:80
    links:
      - vokuro:php
-
   vokuro:
     build:
      context: ./src
