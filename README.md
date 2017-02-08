@@ -8,6 +8,7 @@ $ git clone https://github.com/system-mining/vokuro.git
 $ cd vokuro 
 $ make compose-install
 $ docker-compose up -d
+# Access application at http://localhost:8888
 
 ```
 
@@ -16,4 +17,3 @@ $ docker-compose up -d
  - add `npm & bower` to  dev stack
  - add `docktrine-migration` to application stack
  - ...
- 
